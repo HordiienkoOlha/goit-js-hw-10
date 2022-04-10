@@ -6,7 +6,6 @@ import debounce from 'lodash.debounce';
 const DEBOUNCE_DELAY = 300;
 const textInput = document.querySelector('#search-box');
 
-const countryInfo = document.querySelector('.country-info');
 // Notify.info('Too many matches found. Please enter a more specific name.');
 // Notify.failure('Oops, there is no country with that name');
 
@@ -18,9 +17,8 @@ textInput.addEventListener('input', debounce(onClick, 300));
 function onClick() {
   const name = textInput.value;
   fetchCountries(name)
-    .then(name => console.log(name))
+    .then(data => renderCountryList(data))
     .catch(error => {
       console.error(error);
     });
 }
-// fetchCountries().

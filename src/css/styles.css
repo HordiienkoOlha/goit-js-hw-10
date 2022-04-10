@@ -15,8 +15,7 @@ body {
     background-position: 10px 1px,
     20.4px 11.4px;
     background-color: #fafafa;
-    background-image: radial-gradient(circle, gray 1px, transparent 1px),
-    radial-gradient(circle, gray 1px, transparent 1px);
+    background-image: radial-gradient(circle, #514b4b8e 1px, transparent 1px);
 }
 
 #search-box {
@@ -25,4 +24,34 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
   
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.country-list {
+  /* display: flex; */
+  font-size: 25px;
+  font-weight: 600;
+}
+.country-flag {
+  margin-right: 15px;
+
+}
+.country-item-name {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.country-description-title {
+  font-size: 20px;
+  font-weight: 500;
+
+
+}
+.country-description-data {
+  vertical-align: center;
+  font-weight: 400;
 }
