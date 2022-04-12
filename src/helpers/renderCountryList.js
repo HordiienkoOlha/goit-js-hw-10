@@ -1,15 +1,13 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { resetInput } from './resetInput';
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
 export function renderCountryList(data) {
-  countryList.innerHTML = '';
-  countryInfo.innerHTML = '';
-
+  resetInput();
   if (data.length > 10) {
     Notify.info('Too many matches found. Please enter a more specific name.');
-    countryList.innerHTML = '';
-    countryInfo.innerHTML = '';
+    resetInput();
   } else if (data.length <= 10 && data.length > 2) {
     const markup = data
       .map(
